@@ -1,7 +1,7 @@
-import 'dart:async';
-
 import 'package:classtest/screen/grid_view_screen.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,14 +12,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
-      Navigator.pushReplacement(
+    Timer(
+      Duration(seconds: 2),
+      () => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (context) => GridViewScreen(),
-        ),
-      );
-    });
+        MaterialPageRoute(builder: (context) => GridViewScreen()),
+      ),
+    );
   }
 
   @override
@@ -27,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Text(
-          'Welcome Bhumika', 
+          "Welcome bhumika",
           style: TextStyle(fontSize: 24.0),
         ),
       ),
